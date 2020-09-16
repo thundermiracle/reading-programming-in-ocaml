@@ -20,10 +20,9 @@ exchangeY2D 210;;
 
 
 (* 3.1-3 ******************************)
-open Printf
 let printExchangeD2Y dollar = 
   let yen = exchangeD2Y(dollar) in
-  printf "%.2f dollars are %d yen.\n" dollar yen;;
+  string_of_float dollar ^ " dollars are " ^ string_of_int yen ^ " yen.";;
 
 printExchangeD2Y 100.5;;
 
