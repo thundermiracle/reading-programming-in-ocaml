@@ -16,12 +16,12 @@ quick_sort randlist;;
 
 
 (* no @ version *)
-let rec quick_sort2 r = function
-  [] -> r
-  | [x] -> x::r
+let rec quick_sort2 result = function
+  [] -> result
+  | [x] -> x::result
   | pivot::rest ->
     let rec partition left right = function
-      [] -> quick_sort2 (pivot::quick_sort2 r right) left
+      [] -> quick_sort2 (pivot::quick_sort2 result right) left
       | y::ys -> if pivot < y then partition left (y::right) ys
         else partition (y::left) right ys
     in
