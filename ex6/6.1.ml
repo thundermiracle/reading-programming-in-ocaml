@@ -1,4 +1,10 @@
 (* 6.1 *)
+type figure =
+ Point
+ | Circle of int
+ | Rectangle of int * int
+ | Square of int;;
+
 let similar x y =
   match (x, y) with
   (Point, Point) | (Circle _, Circle _) -> true
