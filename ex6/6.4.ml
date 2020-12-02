@@ -21,7 +21,7 @@ minus Zero two;;
 (* None *)
 
 minus two one;;
-(* OneMoreThan Zero *)
+(* Some (OneMoreThan Zero) *)
 
 minus two two;;
-(* Zero *)
+(* Some (Zero) *)
