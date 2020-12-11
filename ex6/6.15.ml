@@ -32,3 +32,23 @@ let f4 = function
   | Right(Right(b, d)) -> (Right b, Right d);;
 f4 (Right(Left(2, 3)));;
 
+
+(* ⑤ *)
+let f5 (f, g) = function
+  Left a -> f a
+  | Right b -> g b;;
+f5 ((fun a -> a + 1), (fun b -> b + 2)) (Left 3);;
+
+
+(* ⑥ *)
+let f6 sumFunc =
+  let f a = sumFunc (Left a) in
+  let g b = sumFunc (Right b) in
+  (f, g);;
+
+
+(* ⑦ *)
+let f7 s a =
+  match s with
+  Left f -> Left (f a)
+  | Right g -> Right (g a);;
