@@ -10,5 +10,6 @@ let prod_list l =
   try prod_list' l with Multiple_zero -> 0;;
 
 prod_list [2;4;5;];;
-
+(* 40 *)
 prod_list [2;4;0;5;6;7;8;];
+(* 0 *)

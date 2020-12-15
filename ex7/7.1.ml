@@ -8,5 +8,6 @@ let find x l =
   try Some (find' x l) with Not_found -> None;;
 
 find 7 [0;8;7;3;];;
-
+(* Some 3 *)
 find 9 [0;8;7;3;];;
+(* None *)
